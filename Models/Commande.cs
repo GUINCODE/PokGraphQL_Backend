@@ -11,7 +11,7 @@ namespace Ge2Co.Models
         public double NumCommande { get; set; }
         public int EntrepriseId { get; set; }
         public Entreprise Entreprise { get; set; }
-        public ICollection<FicheIntervention> FicheInterventions { get; set; }
-        public ICollection<CommandePersonnel> CommandePersonnels { get; set; }
+        public ICollection<FicheIntervention>? FicheInterventions { get; set; }
+        public ICollection<CommandePersonnel>? CommandePersonnels { get; set; }
     }
 }
