@@ -1,4 +1,3 @@
-
 using Ge2Co.GraphQL;
 using Ge2Co.Models;
 using Microsoft.EntityFrameworkCore;

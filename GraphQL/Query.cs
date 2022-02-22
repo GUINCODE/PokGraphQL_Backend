@@ -4,7 +4,6 @@ namespace Ge2Co.GraphQL
 {
     public class Query
     {
-        // [Serial]
         [UseProjection]
         [UseFiltering]
         [UseSorting]
@@ -13,14 +12,20 @@ namespace Ge2Co.GraphQL
             return context.Commandes;
         }
 
-        // [Serial]
-        // [UseDbContext(typeof(MyAppContext))]
         [UseProjection]
         [UseFiltering]
         [UseSorting]
         public IQueryable<FicheIntervention> GetFiches([Service] DataAppContext context)
         {
             return context.FicheInterventions;
+        }
+
+        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Personnel> GetPersonnels([Service] DataAppContext context)
+        {
+            return context.Personnels;
         }
     }
 }

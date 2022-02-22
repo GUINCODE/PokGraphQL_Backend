@@ -1,3 +1,5 @@
+using System.Data.SqlTypes;
+
 namespace Ge2Co.Models
 {
     public class FicheIntervention
