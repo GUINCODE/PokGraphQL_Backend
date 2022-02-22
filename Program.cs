@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataAppContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddGraphQLServer()
             .AddQueryType<Query>()
-            // .AddMutationType<Mutation>()
+            .AddMutationType<Mutation>()
             // .AddSubscriptionType<Subscription>()
             .AddProjections()
             .AddFiltering()
@@ -45,7 +45,7 @@ app.UseCors(myAllowSpecificOrigins);
 app.UseAuthorization();
 app.MapControllers();
 app.MapGraphQL(); //permet de donner une route par defaut "/graphql" pour ouvrire l'ide Banana cake pop
-app.UseGraphQLVoyager("/voyager");
-app.UseGraphQLAltair("/altaire");
-app.UseGraphQLGraphiQL("/graphiql");
+app.UseGraphQLVoyager("/voyager/");
+app.UseGraphQLAltair("/altaire/");
+app.UseGraphQLGraphiQL("/graphiql/");
 app.Run();
