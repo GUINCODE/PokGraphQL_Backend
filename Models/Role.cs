@@ -7,6 +7,6 @@ namespace Ge2Co.Models
         public int Id { get; set; }
         public string Labelle { get; set; }
         public bool IsActive { get; set; } = true;
-        public ICollection<CommandePersonnel> CommandePersonnels { get; set; }
+        public ICollection<CommandePersonnel>? CommandePersonnels { get; set; }
     }
 }

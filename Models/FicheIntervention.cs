@@ -10,9 +10,9 @@ namespace Ge2Co.Models
         public string Description { get; set; }
         public double Montant { get; set; }
         public int CommandeId { get; set; }
-        public Commande Commande { get; set; }
+        public Commande? Commande { get; set; }
         public int StatusFicheInterventionId { get; set; }
-        public StatusFicheIntervention StatusFicheIntervention { get; set; }
+        public StatusFicheIntervention? StatusFicheIntervention { get; set; }
     }
 
 }

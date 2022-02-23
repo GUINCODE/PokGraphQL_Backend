@@ -6,6 +6,6 @@ namespace Ge2Co.Models
     {
         public int Id { get; set; } 
         public string  Name { get; set; }
-     public ICollection<CommandePersonnel> CommandePersonnels { get; set; }
+     public ICollection<CommandePersonnel>? CommandePersonnels { get; set; }
     }
 }
