@@ -27,5 +27,13 @@ namespace Ge2Co.GraphQL
         {
             return context.Personnels;
         }
+
+        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
+        public IQueryable<Entreprise> GetEntreprises([Service] DataAppContext context)
+        {
+            return context.Entreprises;
+        }
     }
 }
