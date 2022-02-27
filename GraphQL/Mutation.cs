@@ -12,6 +12,14 @@ namespace Ge2Co.GraphQL
             return "saved";
         }
 
+        public async Task<String> UpdateCommandeAsync([Service] DataAppContext context, Commande newCommande)
+        {
+            context.Commandes.Update(newCommande);
+            await context.SaveChangesAsync();
+            return "updated";
+        }
+
+
         public async Task<String> DeleteCommandeAsync([Service] DataAppContext context, int id)
         {
             var cmd = await context.Commandes.FindAsync(id);
